@@ -490,19 +490,28 @@ class BlockImage {
 namespace pixelArt {
     //% block="BlockImage Test"
     export function testBlockImage() {
-        let image = new BlockImage(1, 1);
-
+        let image = new BlockImage(2, 1);
+    
         image.setBlock(
             0,
             0,
             PixelBlock.RedConcrete
         );
-
-        let block = image.getBlock(0, 0);
-
+    
+        image.setBlock(
+            1,
+            0,
+            PixelBlock.WhiteTerracotta
+        );
+    
         blocks.place(
-            getMinecraftBlock(block),
+            getMinecraftBlock(image.getBlock(0, 0)),
             pos(0, 0, 0)
+        );
+    
+        blocks.place(
+            getMinecraftBlock(image.getBlock(1, 0)),
+            pos(1, 0, 0)
         );
     }
 }

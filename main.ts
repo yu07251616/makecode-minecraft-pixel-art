@@ -397,6 +397,51 @@ function getMinecraftBlock(block: PixelBlock): number {
 
         case PixelBlock.WhiteTerracotta:
             return WHITE_TERRACOTTA;
+
+        case PixelBlock.OrangeTerracotta:
+            return ORANGE_TERRACOTTA;
+
+        case PixelBlock.MagentaTerracotta:
+            return MAGENTA_TERRACOTTA;
+        
+        case PixelBlock.LightBlueTerracotta:
+            return LIGHT_BLUE_TERRACOTTA;
+        
+        case PixelBlock.YellowTerracotta:
+            return YELLOW_TERRACOTTA;
+        
+        case PixelBlock.LimeTerracotta:
+            return LIME_TERRACOTTA;
+        
+        case PixelBlock.PinkTerracotta:
+            return PINK_TERRACOTTA;
+        
+        case PixelBlock.GrayTerracotta:
+            return GRAY_TERRACOTTA;
+        
+        case PixelBlock.LightGrayTerracotta:
+            return LIGHT_GRAY_TERRACOTTA;
+        
+        case PixelBlock.CyanTerracotta:
+            return CYAN_TERRACOTTA;
+        
+        case PixelBlock.PurpleTerracotta:
+            return PURPLE_TERRACOTTA;
+        
+        case PixelBlock.BlueTerracotta:
+            return BLUE_TERRACOTTA;
+        
+        case PixelBlock.BrownTerracotta:
+            return BROWN_TERRACOTTA;
+        
+        case PixelBlock.GreenTerracotta:
+            return GREEN_TERRACOTTA;
+        
+        case PixelBlock.RedTerracotta:
+            return RED_TERRACOTTA;
+        
+        case PixelBlock.BlackTerracotta:
+            return BLACK_TERRACOTTA;
     }
 
     return 0;

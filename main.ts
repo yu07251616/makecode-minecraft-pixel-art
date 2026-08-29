@@ -448,7 +448,7 @@ function getMinecraftBlock(block: PixelBlock): number {
 }
 
 class BlockImage {
-    protected buf: number[];
+    protected buf: PixelBlock[];
 
     constructor(public width: number, public height: number) {
         if (!this.width) this.width = 16;
@@ -461,7 +461,7 @@ class BlockImage {
         }
     }
 
-    setBlock(col: number, row: number, block: number) {
+    setBlock(col: number, row: number, block: PixelBlock) {
         if (
             col < this.width &&
             row < this.height &&
@@ -482,6 +482,6 @@ class BlockImage {
             return this.buf[col + row * this.width];
         }
 
-        return 0;
+        return PixelBlock.Empty;
     }
 }

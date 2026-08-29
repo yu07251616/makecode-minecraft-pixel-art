@@ -485,3 +485,24 @@ class BlockImage {
         return PixelBlock.Empty;
     }
 }
+
+
+namespace pixelArt {
+    //% block="BlockImage Test"
+    export function testBlockImage() {
+        let image = new BlockImage(1, 1);
+
+        image.setBlock(
+            0,
+            0,
+            PixelBlock.RedConcrete
+        );
+
+        let block = image.getBlock(0, 0);
+
+        blocks.place(
+            getMinecraftBlock(block),
+            pos(0, 0, 0)
+        );
+    }
+}

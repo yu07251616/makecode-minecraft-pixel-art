@@ -325,7 +325,23 @@ enum PixelBlock {
     BrownConcrete = 13,
     GreenConcrete = 14,
     RedConcrete = 15,
-    BlackConcrete = 16
+    BlackConcrete = 16,
+    WhiteTerracotta = 17,
+    OrangeTerracotta = 18,
+    MagentaTerracotta = 19,
+    LightBlueTerracotta = 20,
+    YellowTerracotta = 21,
+    LimeTerracotta = 22,
+    PinkTerracotta = 23,
+    GrayTerracotta = 24,
+    LightGrayTerracotta = 25,
+    CyanTerracotta = 26,
+    PurpleTerracotta = 27,
+    BlueTerracotta = 28,
+    BrownTerracotta = 29,
+    GreenTerracotta = 30,
+    RedTerracotta = 31,
+    BlackTerracotta = 32
 }
 
 

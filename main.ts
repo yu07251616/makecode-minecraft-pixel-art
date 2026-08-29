@@ -305,3 +305,43 @@ class Image {
         }
     }
 }
+
+
+class BlockImage {
+    protected buf: number[];
+
+    constructor(public width: number, public height: number) {
+        if (!this.width) this.width = 16;
+        if (!this.height) this.height = 16;
+
+        this.buf = [];
+
+        for (let i = 0; i < this.width * this.height; i++) {
+            this.buf.push(0);
+        }
+    }
+
+    setBlock(col: number, row: number, block: number) {
+        if (
+            col < this.width &&
+            row < this.height &&
+            col >= 0 &&
+            row >= 0
+        ) {
+            this.buf[col + row * this.width] = block;
+        }
+    }
+
+    getBlock(col: number, row: number) {
+        if (
+            col < this.width &&
+            row < this.height &&
+            col >= 0 &&
+            row >= 0
+        ) {
+            return this.buf[col + row * this.width];
+        }
+
+        return 0;
+    }
+}

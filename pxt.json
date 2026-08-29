@@ -16,6 +16,9 @@
         "_locales/ja/makecode-minecraft-pixel-art-strings.json"
     ],
     "testFiles": [],
+    "extension": {
+        "url": "あなたのGitHub PagesのURL"
+    },
     "supportedTargets": [
         "arcade"
     ],

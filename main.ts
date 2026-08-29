@@ -345,6 +345,60 @@ enum PixelBlock {
 }
 
 
+function getMinecraftBlock(block: PixelBlock): number {
+    switch (block) {
+        case PixelBlock.WhiteConcrete:
+            return WHITE_CONCRETE;
+
+        case PixelBlock.OrangeConcrete:
+            return ORANGE_CONCRETE;
+
+        case PixelBlock.MagentaConcrete:
+            return MAGENTA_CONCRETE;
+
+        case PixelBlock.LightBlueConcrete:
+            return LIGHT_BLUE_CONCRETE;
+
+        case PixelBlock.YellowConcrete:
+            return YELLOW_CONCRETE;
+
+        case PixelBlock.LimeConcrete:
+            return LIME_CONCRETE;
+
+        case PixelBlock.PinkConcrete:
+            return PINK_CONCRETE;
+
+        case PixelBlock.GrayConcrete:
+            return GRAY_CONCRETE;
+
+        case PixelBlock.LightGrayConcrete:
+            return LIGHT_GRAY_CONCRETE;
+
+        case PixelBlock.CyanConcrete:
+            return CYAN_CONCRETE;
+
+        case PixelBlock.PurpleConcrete:
+            return PURPLE_CONCRETE;
+
+        case PixelBlock.BlueConcrete:
+            return BLUE_CONCRETE;
+
+        case PixelBlock.BrownConcrete:
+            return BROWN_CONCRETE;
+
+        case PixelBlock.GreenConcrete:
+            return GREEN_CONCRETE;
+
+        case PixelBlock.RedConcrete:
+            return RED_CONCRETE;
+
+        case PixelBlock.BlackConcrete:
+            return BLACK_CONCRETE;
+    }
+
+    return 0;
+}
+
 class BlockImage {
     protected buf: number[];
 

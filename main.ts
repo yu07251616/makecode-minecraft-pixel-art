@@ -517,7 +517,7 @@ function drawBlockImage(
 namespace pixelArt {
     //% block="BlockImage Test"
     export function testBlockImage() {
-        let image = new BlockImage(2, 1);
+        let image = new BlockImage(2, 2);
     
         image.setBlock(
             0,
@@ -531,14 +531,15 @@ namespace pixelArt {
             PixelBlock.WhiteTerracotta
         );
     
-        blocks.place(
-            getMinecraftBlock(image.getBlock(0, 0)),
-            pos(0, 0, 0)
+        image.setBlock(
+            0,
+            1,
+            PixelBlock.BlueConcrete
         );
     
-        blocks.place(
-            getMinecraftBlock(image.getBlock(1, 0)),
-            pos(1, 0, 0)
+        drawBlockImage(
+            image,
+            pos(0, 1, 0)
         );
     }
 }

@@ -2,10 +2,48 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>Pixel Art Editor Test</title>
+    <title>Pixel Art Editor</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        #canvas {
+            display: grid;
+            grid-template-columns: repeat(16, 24px);
+            grid-template-rows: repeat(16, 24px);
+            gap: 1px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .pixel {
+            width: 24px;
+            height: 24px;
+            background-color: white;
+            border: 1px solid #cccccc;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Pixel Art Editor Test</h1>
-    <p>GitHub Pages is working.</p>
+
+    <h1>Pixel Art Editor</h1>
+
+    <div id="canvas"></div>
+
+    <script>
+        const canvas = document.getElementById("canvas");
+
+        for (let i = 0; i < 16 * 16; i++) {
+            const pixel = document.createElement("div");
+            pixel.className = "pixel";
+            canvas.appendChild(pixel);
+        }
+    </script>
+
 </body>
 </html>

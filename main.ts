@@ -394,6 +394,9 @@ function getMinecraftBlock(block: PixelBlock): number {
 
         case PixelBlock.BlackConcrete:
             return BLACK_CONCRETE;
+
+        case PixelBlock.WhiteTerracotta:
+            return WHITE_TERRACOTTA;
     }
 
     return 0;

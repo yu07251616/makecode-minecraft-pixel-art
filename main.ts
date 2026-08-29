@@ -487,6 +487,33 @@ class BlockImage {
 }
 
 
+function drawBlockImage(
+    image: BlockImage,
+    position: Position
+) {
+    for (let y = 0; y < image.height; y++) {
+        for (let x = 0; x < image.width; x++) {
+
+            let pixelBlock = image.getBlock(x, y);
+
+            if (pixelBlock == PixelBlock.Empty) {
+                continue;
+            }
+
+            let minecraftBlock = getMinecraftBlock(pixelBlock);
+
+            blocks.place(
+                minecraftBlock,
+                positions.add(
+                    position,
+                    pos(x, -y, 0)
+                )
+            );
+        }
+    }
+}
+
+
 namespace pixelArt {
     //% block="BlockImage Test"
     export function testBlockImage() {

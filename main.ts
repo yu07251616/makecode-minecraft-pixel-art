@@ -307,6 +307,28 @@ class Image {
 }
 
 
+enum PixelBlock {
+    Empty = 0,
+
+    WhiteConcrete = 1,
+    OrangeConcrete = 2,
+    MagentaConcrete = 3,
+    LightBlueConcrete = 4,
+    YellowConcrete = 5,
+    LimeConcrete = 6,
+    PinkConcrete = 7,
+    GrayConcrete = 8,
+    LightGrayConcrete = 9,
+    CyanConcrete = 10,
+    PurpleConcrete = 11,
+    BlueConcrete = 12,
+    BrownConcrete = 13,
+    GreenConcrete = 14,
+    RedConcrete = 15,
+    BlackConcrete = 16
+}
+
+
 class BlockImage {
     protected buf: number[];
 

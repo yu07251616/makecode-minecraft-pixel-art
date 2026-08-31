@@ -73,36 +73,41 @@
         const heightInput = document.getElementById("canvas-height");
         const resizeButton = document.getElementById("resize-button");
     
+        const blockButtons = document.querySelectorAll(".block-button");
+    
+        let selectedBlock = "RedConcrete";
+        let selectedColor = "#b02e26";
+    
+        blockButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                selectedBlock = button.dataset.block;
+                selectedColor = button.dataset.color;
+            });
+        });
+    
         function createCanvas(width, height) {
-
-            // 現在のキャンバスを空にする
             canvas.innerHTML = "";
     
-            // 指定された横幅・高さに変更
             canvas.style.gridTemplateColumns = `repeat(${width}, 24px)`;
             canvas.style.gridTemplateRows = `repeat(${height}, 24px)`;
-
-            // 必要な数だけマスを作る
+    
             for (let i = 0; i < width * height; i++) {
                 const pixel = document.createElement("div");
     
                 pixel.className = "pixel";
     
                 pixel.addEventListener("click", function () {
-                    pixel.dataset.block = "RedConcrete";
-                    pixel.style.backgroundColor = "#b02e26";
+                    pixel.dataset.block = selectedBlock;
+                    pixel.style.backgroundColor = selectedColor;
                 });
     
                 canvas.appendChild(pixel);
             }
         }
-
-        // 最初は16×16
+    
         createCanvas(16, 16);
     
-        // Resizeボタン
         resizeButton.addEventListener("click", function () {
-    
             const width = Number(widthInput.value);
             const height = Number(heightInput.value);
     

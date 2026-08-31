@@ -77,6 +77,13 @@
     
         let selectedBlock = "RedConcrete";
         let selectedColor = "#b02e26";
+
+        let isDrawing = false;
+
+        function paintPixel(pixel) {
+            pixel.dataset.block = selectedBlock;
+            pixel.style.backgroundColor = selectedColor;
+        }
     
         blockButtons.forEach(function (button) {
             button.addEventListener("click", function () {
@@ -96,14 +103,24 @@
     
                 pixel.className = "pixel";
     
-                pixel.addEventListener("click", function () {
-                    pixel.dataset.block = selectedBlock;
-                    pixel.style.backgroundColor = selectedColor;
+                pixel.addEventListener("pointerdown", function () {
+                    isDrawing = true;
+                    paintPixel(pixel);
+                });
+
+                pixel.addEventListener("pointerenter", function () {
+                    if (isDrawing) {
+                        paintPixel(pixel);
+                    }
                 });
     
                 canvas.appendChild(pixel);
             }
         }
+
+        document.addEventListener("pointerup", function () {
+            isDrawing = false;
+        });
     
         createCanvas(16, 16);
     

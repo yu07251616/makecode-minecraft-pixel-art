@@ -36,11 +36,16 @@
     <div id="canvas"></div>
 
     <script>
-        const canvas = document.getElementById("canvas");
-
         for (let i = 0; i < 16 * 16; i++) {
             const pixel = document.createElement("div");
+        
             pixel.className = "pixel";
+        
+            pixel.addEventListener("click", function () {
+                pixel.dataset.block = "RedConcrete";
+                pixel.style.backgroundColor = "#b02e26";
+            });
+
             canvas.appendChild(pixel);
         }
     </script>

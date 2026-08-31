@@ -90,6 +90,8 @@
         let canvasWidth = 16;
         let canvasHeight = 16;
 
+        let pixelData = new Array(canvasWidth * canvasHeight).fill("Empty");
+
         function paintPixel(pixel) {
             pixel.dataset.block = selectedBlock;
             pixel.style.backgroundColor = selectedColor;

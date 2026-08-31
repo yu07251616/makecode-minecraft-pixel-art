@@ -50,18 +50,50 @@
     <div id="canvas"></div>
 
     <script>
-        for (let i = 0; i < 16 * 16; i++) {
-            const pixel = document.createElement("div");
-        
-            pixel.className = "pixel";
-        
-            pixel.addEventListener("click", function () {
-                pixel.dataset.block = "RedConcrete";
-                pixel.style.backgroundColor = "#b02e26";
-            });
+        const canvas = document.getElementById("canvas");
+        const widthInput = document.getElementById("canvas-width");
+        const heightInput = document.getElementById("canvas-height");
+        const resizeButton = document.getElementById("resize-button");
+    
+        function createCanvas(width, height) {
 
-            canvas.appendChild(pixel);
+            // 現在のキャンバスを空にする
+            canvas.innerHTML = "";
+    
+            // 指定された横幅・高さに変更
+            canvas.style.gridTemplateColumns = `repeat(${width}, 24px)`;
+            canvas.style.gridTemplateRows = `repeat(${height}, 24px)`;
+
+            // 必要な数だけマスを作る
+            for (let i = 0; i < width * height; i++) {
+                const pixel = document.createElement("div");
+    
+                pixel.className = "pixel";
+    
+                pixel.addEventListener("click", function () {
+                    pixel.dataset.block = "RedConcrete";
+                    pixel.style.backgroundColor = "#b02e26";
+                });
+    
+                canvas.appendChild(pixel);
+            }
         }
+
+        // 最初は16×16
+        createCanvas(16, 16);
+    
+        // Resizeボタン
+        resizeButton.addEventListener("click", function () {
+    
+            const width = Number(widthInput.value);
+            const height = Number(heightInput.value);
+    
+            if (width < 1 || height < 1) {
+                return;
+            }
+    
+            createCanvas(width, height);
+        });
     </script>
 
 </body>

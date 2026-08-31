@@ -100,6 +100,18 @@
             pixel.dataset.block = selectedBlock;
             pixel.style.backgroundColor = selectedColor;
         }
+
+        function getBlockColor(block) {
+            if (block === "RedConcrete") {
+                return "#b02e26";
+            }
+        
+            if (block === "WhiteTerracotta") {
+                return "#d1b1a1";
+            }
+        
+            return "white";
+        }
     
         blockButtons.forEach(function (button) {
             button.addEventListener("click", function () {
@@ -119,6 +131,9 @@
     
                 pixel.className = "pixel";
                 pixel.dataset.index = i;
+
+                pixel.dataset.block = pixelData[i];
+                pixel.style.backgroundColor = getBlockColor(pixelData[i]);
     
                 pixel.addEventListener("pointerdown", function () {
                     isDrawing = true;

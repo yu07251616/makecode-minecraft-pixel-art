@@ -102,15 +102,30 @@
         }
 
         function getBlockColor(block) {
-            if (block === "RedConcrete") {
-                return "#b02e26";
-            }
+            const blockColors = {
+                Empty: "white",
         
-            if (block === "WhiteTerracotta") {
-                return "#d1b1a1";
-            }
+                WhiteConcrete: "#cfd5d6",
+                OrangeConcrete: "#e06101",
+                MagentaConcrete: "#a9309f",
+                LightBlueConcrete: "#2389c6",
+                YellowConcrete: "#f1af15",
+                LimeConcrete: "#5ea818",
+                PinkConcrete: "#d5658e",
+                GrayConcrete: "#36393d",
+                LightGrayConcrete: "#7d7d73",
+                CyanConcrete: "#157788",
+                PurpleConcrete: "#64209c",
+                BlueConcrete: "#2c2e8f",
+                BrownConcrete: "#603b1f",
+                GreenConcrete: "#495b24",
+                RedConcrete: "#8e2121",
+                BlackConcrete: "#080a0f",
         
-            return "white";
+                WhiteTerracotta: "#d1b1a1"
+            };
+
+            return blockColors[block] || "white";
         }
     
         blockButtons.forEach(function (button) {

@@ -157,14 +157,38 @@
         createCanvas(16, 16);
     
         resizeButton.addEventListener("click", function () {
-            const width = Number(widthInput.value);
-            const height = Number(heightInput.value);
-    
-            if (width < 1 || height < 1) {
+            const newWidth = Number(widthInput.value);
+            const newHeight = Number(heightInput.value);
+        
+            if (newWidth < 1 || newHeight < 1) {
                 return;
             }
-    
-            createCanvas(width, height);
+        
+            const newPixelData =
+                new Array(newWidth * newHeight).fill("Empty");
+        
+            const copyWidth = Math.min(canvasWidth, newWidth);
+            const copyHeight = Math.min(canvasHeight, newHeight);
+        
+            for (let y = 0; y < copyHeight; y++) {
+                for (let x = 0; x < copyWidth; x++) {
+        
+                    const oldIndex =
+                        x + y * canvasWidth;
+        
+                    const newIndex =
+                        x + y * newWidth;
+        
+                    newPixelData[newIndex] =
+                        pixelData[oldIndex];
+                }
+            }
+        
+            canvasWidth = newWidth;
+            canvasHeight = newHeight;
+            pixelData = newPixelData;
+        
+            createCanvas(canvasWidth, canvasHeight);
         });
     </script>
 

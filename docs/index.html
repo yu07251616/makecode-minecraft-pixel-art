@@ -93,6 +93,10 @@
         let pixelData = new Array(canvasWidth * canvasHeight).fill("Empty");
 
         function paintPixel(pixel) {
+            const index = Number(pixel.dataset.index);
+
+            pixelData[index] = selectedBlock;
+        
             pixel.dataset.block = selectedBlock;
             pixel.style.backgroundColor = selectedColor;
         }

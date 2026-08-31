@@ -114,6 +114,7 @@
                 const pixel = document.createElement("div");
     
                 pixel.className = "pixel";
+                pixel.dataset.index = i;
     
                 pixel.addEventListener("pointerdown", function () {
                     isDrawing = true;

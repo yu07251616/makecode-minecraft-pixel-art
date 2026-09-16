@@ -486,6 +486,33 @@ class BlockImage {
     }
 }
 
+function parseBlockImage(data: string): BlockImage {
+    let parts = data.split("|");
+
+    let size = parts[0].split(",");
+
+    let width = parseInt(size[0]);
+    let height = parseInt(size[1]);
+
+    let blockData = parts[1].split(",");
+
+    let image = new BlockImage(width, height);
+
+    for (let i = 0; i < blockData.length; i++) {
+        let blockId = parseInt(blockData[i]);
+
+        let x = i % width;
+        let y = Math.floor(i / width);
+
+        image.setBlock(
+            x,
+            y,
+            blockId as PixelBlock
+        );
+    }
+
+    return image;
+}
 
 function drawBlockImage(
     image: BlockImage,

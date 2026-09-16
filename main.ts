@@ -569,4 +569,14 @@ namespace pixelArt {
             pos(0, 1, 0)
         );
     }
+
+    //% block="Draw BlockImage $data"
+    export function drawBlockImageFromData(data: string) {
+        let image = parseBlockImage(data);
+    
+        drawBlockImage(
+            image,
+            pos(0, 1, 0)
+        );
+    }
 }

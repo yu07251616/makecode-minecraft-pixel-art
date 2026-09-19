@@ -594,16 +594,18 @@ namespace pixelArt {
         );
     }
 
-    //% block="Draw BlockImage $data at $position"
+    //% block="Draw BlockImage $data at $position facing $direction"
     export function drawBlockImageFromData(
         data: string,
-        position: Position
+        position: Position,
+        direction: CompassDirection
     ) {
         let image = parseBlockImage(data);
     
         drawBlockImage(
             image,
-            position
+            position,
+            direction
         );
     }
 }

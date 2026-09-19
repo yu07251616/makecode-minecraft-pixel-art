@@ -129,6 +129,7 @@ namespace pixelArt {
      */
     //% blockId=minecraft_pixel_art_draw_image
     //% block="draw image $image at $position along $direction"
+    //% blockHidden=true
     //% image.shadow=minecraft_pixel_art_sprite_image
     //% position.shadow=minecraftCreatePosition
     //% weight=111

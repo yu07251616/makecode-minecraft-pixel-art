@@ -591,7 +591,8 @@ namespace pixelArt {
     
         drawBlockImage(
             image,
-            pos(0, 1, 0)
+            pos(0, 1, 0),
+            WEST
         );
     }
 

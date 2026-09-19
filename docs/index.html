@@ -214,6 +214,7 @@
         const resizeButton = document.getElementById("resize-button");
         const exportButton = document.getElementById("export-button");
         const exportOutput = document.getElementById("export-output");
+        const copyButton = document.getElementById("copy-button");
     
         const blockButtons = document.querySelectorAll(".block-button");
     
@@ -411,6 +412,10 @@
                 canvasHeight +
                 "|" +
                 blockIds.join(",");
+        });
+
+        copyButton.addEventListener("click", function () {
+            navigator.clipboard.writeText(exportOutput.value);
         });
     </script>
 

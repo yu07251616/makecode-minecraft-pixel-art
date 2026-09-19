@@ -519,7 +519,8 @@ function parseBlockImage(data: string): BlockImage {
 
 function drawBlockImage(
     image: BlockImage,
-    position: Position
+    position: Position,
+    direction: CompassDirection
 ) {
     player.say(
         "Draw start: " +

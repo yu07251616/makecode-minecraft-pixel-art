@@ -514,11 +514,29 @@ function parseBlockImage(data: string): BlockImage {
     return image;
 }
 
+
 function drawBlockImage(
     image: BlockImage,
     position: Position
 ) {
+    player.say(
+        "Draw start: " +
+        image.width +
+        "x" +
+        image.height
+    );
+
     for (let y = 0; y < image.height; y++) {
+
+        if (y % 4 == 0) {
+            player.say(
+                "Drawing row " +
+                y +
+                " / " +
+                image.height
+            );
+        }
+
         for (let x = 0; x < image.width; x++) {
 
             let pixelBlock = image.getBlock(x, y);
@@ -527,7 +545,8 @@ function drawBlockImage(
                 continue;
             }
 
-            let minecraftBlock = getMinecraftBlock(pixelBlock);
+            let minecraftBlock =
+                getMinecraftBlock(pixelBlock);
 
             blocks.place(
                 minecraftBlock,
@@ -538,6 +557,8 @@ function drawBlockImage(
             );
         }
     }
+
+    player.say("Draw complete");
 }
 
 

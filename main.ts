@@ -551,12 +551,36 @@ function drawBlockImage(
             let minecraftBlock =
                 getMinecraftBlock(pixelBlock);
 
-            blocks.place(
-                minecraftBlock,
-                positions.add(
+            let drawPos: Position;
+
+            if (direction == WEST) {
+                drawPos = positions.add(
                     position,
                     pos(x, -y, 0)
-                )
+                );
+            }
+            else if (direction == EAST) {
+                drawPos = positions.add(
+                    position,
+                    pos(-x, -y, 0)
+                );
+            }
+            else if (direction == NORTH) {
+                drawPos = positions.add(
+                    position,
+                    pos(0, -y, x)
+                );
+            }
+            else {
+                drawPos = positions.add(
+                    position,
+                    pos(0, -y, -x)
+                );
+            }
+            
+            blocks.place(
+                minecraftBlock,
+                drawPos
             );
         }
     }

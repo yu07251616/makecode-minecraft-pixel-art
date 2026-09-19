@@ -109,6 +109,7 @@ namespace pixelArt {
      */
     //% blockId=minecraft_pixel_art_sprite_image
     //% block="$img"
+    //% blockHidden=true
     //% shim=TD_ID
     //% img.fieldEditor="sprite"
     //% img.fieldOptions.taggedTemplate="img"

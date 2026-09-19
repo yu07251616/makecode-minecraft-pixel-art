@@ -564,6 +564,7 @@ function drawBlockImage(
 
 namespace pixelArt {
     //% block="BlockImage Test"
+    //% blockHidden=true
     export function testBlockImage() {
         let image = new BlockImage(2, 2);
     

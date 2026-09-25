@@ -228,6 +228,9 @@
 
         let pixelData = new Array(canvasWidth * canvasHeight).fill("Empty");
 
+        let history = [];
+        const maxHistory = 50;
+
         function paintPixel(pixel) {
             const index = Number(pixel.dataset.index);
 

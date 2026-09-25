@@ -457,7 +457,8 @@
             ) {
                 return;
             }
-        
+
+            // Ctrl+Z : Undo
             if (
                 (event.ctrlKey || event.metaKey) &&
                 event.key.toLowerCase() === "z"
@@ -478,6 +479,35 @@
                 // 1つ前の状態へ戻す
                 pixelData = history.pop();
                 
+                createCanvas(
+                    canvasWidth,
+                    canvasHeight
+                );
+
+                return;
+            }
+
+            // Ctrl+Y : Redo
+            if (
+                (event.ctrlKey || event.metaKey) &&
+                event.key.toLowerCase() === "y"
+            ) {
+                if (redoHistory.length === 0) {
+                    return;
+                }
+            
+                event.preventDefault();
+            
+                // Redoする前の状態をUndo用に保存
+                history.push([...pixelData]);
+            
+                if (history.length > maxHistory) {
+                    history.shift();
+                }
+            
+                // 1つ先の状態へ進む
+                pixelData = redoHistory.pop();
+            
                 createCanvas(
                     canvasWidth,
                     canvasHeight

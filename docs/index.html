@@ -371,6 +371,7 @@
                 pixel.style.backgroundColor = getBlockColor(pixelData[i]);
     
                 pixel.addEventListener("pointerdown", function () {
+                    saveHistory();
                     isDrawing = true;
                     paintPixel(pixel);
                 });

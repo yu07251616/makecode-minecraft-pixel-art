@@ -445,6 +445,36 @@
         copyButton.addEventListener("click", function () {
             navigator.clipboard.writeText(exportOutput.value);
         });
+
+        document.addEventListener("keydown", function (event) {
+            const activeElement = document.activeElement;
+        
+            // Ctrl+Zで一つ前の状態へ戻す
+            if (
+                activeElement.tagName === "INPUT" ||
+                activeElement.tagName === "TEXTAREA"
+            ) {
+                return;
+            }
+        
+            if (
+                (event.ctrlKey || event.metaKey) &&
+                event.key.toLowerCase() === "z"
+            ) {
+                if (history.length === 0) {
+                    return;
+                }
+        
+                event.preventDefault();
+        
+                pixelData = history.pop();
+        
+                createCanvas(
+                    canvasWidth,
+                    canvasHeight
+                );
+            }
+        });
     </script>
 
 </body>

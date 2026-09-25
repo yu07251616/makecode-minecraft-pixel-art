@@ -229,6 +229,7 @@
         let pixelData = new Array(canvasWidth * canvasHeight).fill("Empty");
 
         let history = [];
+        let redoHistory = [];
         const maxHistory = 50;
 
         function saveHistory() {
@@ -466,9 +467,17 @@
                 }
         
                 event.preventDefault();
-        
+
+                // Undoする前の状態をRedo用に保存
+                redoHistory.push([...pixelData]);
+                
+                if (redoHistory.length > maxHistory) {
+                    redoHistory.shift();
+                }
+                
+                // 1つ前の状態へ戻す
                 pixelData = history.pop();
-        
+                
                 createCanvas(
                     canvasWidth,
                     canvasHeight

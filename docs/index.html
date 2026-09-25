@@ -322,6 +322,22 @@
         }
     
         blockButtons.forEach(function (button) {
+
+            // 消しゴム以外には色の見本を付ける
+            if (button.dataset.block !== "Empty") {
+                const colorSample = document.createElement("span");
+        
+                colorSample.style.display = "inline-block";
+                colorSample.style.width = "18px";
+                colorSample.style.height = "18px";
+                colorSample.style.marginLeft = "8px";
+                colorSample.style.verticalAlign = "middle";
+                colorSample.style.border = "1px solid #666";
+                colorSample.style.backgroundColor = button.dataset.color;
+        
+                button.appendChild(colorSample);
+            }
+        
             button.addEventListener("click", function () {
                 selectedBlock = button.dataset.block;
                 selectedColor = button.dataset.color;

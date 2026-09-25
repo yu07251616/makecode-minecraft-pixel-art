@@ -231,6 +231,14 @@
         let history = [];
         const maxHistory = 50;
 
+        function saveHistory() {
+            history.push([...pixelData]);
+        
+            if (history.length > maxHistory) {
+                history.shift();
+            }
+        }
+
         function paintPixel(pixel) {
             const index = Number(pixel.dataset.index);
 

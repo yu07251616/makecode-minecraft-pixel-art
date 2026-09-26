@@ -466,52 +466,10 @@ function getMinecraftBlock(block: PixelBlock): number {
             return BLACK_TERRACOTTA;
 
         case PixelBlock.WhiteWool:
-            return WHITE_WOOL;
-
-        case PixelBlock.OrangeWool:
-            return ORANGE_WOOL;
-        
-        case PixelBlock.MagentaWool:
-            return MAGENTA_WOOL;
-        
-        case PixelBlock.LightBlueWool:
-            return LIGHT_BLUE_WOOL;
-        
-        case PixelBlock.YellowWool:
-            return YELLOW_WOOL;
-        
-        case PixelBlock.LimeWool:
-            return LIME_WOOL;
-        
-        case PixelBlock.PinkWool:
-            return PINK_WOOL;
-        
-        case PixelBlock.GrayWool:
-            return GRAY_WOOL;
-        
-        case PixelBlock.LightGrayWool:
-            return LIGHT_GRAY_WOOL;
-        
-        case PixelBlock.CyanWool:
-            return CYAN_WOOL;
-        
-        case PixelBlock.PurpleWool:
-            return PURPLE_WOOL;
-        
-        case PixelBlock.BlueWool:
-            return BLUE_WOOL;
-        
-        case PixelBlock.BrownWool:
-            return BROWN_WOOL;
-        
-        case PixelBlock.GreenWool:
-            return GREEN_WOOL;
-        
-        case PixelBlock.RedWool:
-            return RED_WOOL;
-        
-        case PixelBlock.BlackWool:
-            return BLACK_WOOL;
+            return blocks.colorToBlock(
+                COLORED_WOOL,
+                WHITE
+    );
     }
 
     return 0;

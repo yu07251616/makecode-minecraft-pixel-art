@@ -311,7 +311,7 @@ class Image {
 
 enum PixelBlock {
     Empty = 0,
-
+    // Concrete Blocks
     WhiteConcrete = 1,
     OrangeConcrete = 2,
     MagentaConcrete = 3,
@@ -328,6 +328,8 @@ enum PixelBlock {
     GreenConcrete = 14,
     RedConcrete = 15,
     BlackConcrete = 16,
+
+    // Terracotta Blocks
     WhiteTerracotta = 17,
     OrangeTerracotta = 18,
     MagentaTerracotta = 19,
@@ -343,7 +345,25 @@ enum PixelBlock {
     BrownTerracotta = 29,
     GreenTerracotta = 30,
     RedTerracotta = 31,
-    BlackTerracotta = 32
+    BlackTerracotta = 32,
+
+    // Wool Blocks
+    WhiteWool = 33,
+    OrangeWool = 34,
+    MagentaWool = 35,
+    LightBlueWool = 36,
+    YellowWool = 37,
+    LimeWool = 38,
+    PinkWool = 39,
+    GrayWool = 40,
+    LightGrayWool = 41,
+    CyanWool = 42,
+    PurpleWool = 43,
+    BlueWool = 44,
+    BrownWool = 45,
+    GreenWool = 46,
+    RedWool = 47,
+    BlackWool = 48
 }
 
 
@@ -444,6 +464,54 @@ function getMinecraftBlock(block: PixelBlock): number {
         
         case PixelBlock.BlackTerracotta:
             return BLACK_TERRACOTTA;
+
+        case PixelBlock.WhiteWool:
+            return WHITE_WOOL;
+
+        case PixelBlock.OrangeWool:
+            return ORANGE_WOOL;
+        
+        case PixelBlock.MagentaWool:
+            return MAGENTA_WOOL;
+        
+        case PixelBlock.LightBlueWool:
+            return LIGHT_BLUE_WOOL;
+        
+        case PixelBlock.YellowWool:
+            return YELLOW_WOOL;
+        
+        case PixelBlock.LimeWool:
+            return LIME_WOOL;
+        
+        case PixelBlock.PinkWool:
+            return PINK_WOOL;
+        
+        case PixelBlock.GrayWool:
+            return GRAY_WOOL;
+        
+        case PixelBlock.LightGrayWool:
+            return LIGHT_GRAY_WOOL;
+        
+        case PixelBlock.CyanWool:
+            return CYAN_WOOL;
+        
+        case PixelBlock.PurpleWool:
+            return PURPLE_WOOL;
+        
+        case PixelBlock.BlueWool:
+            return BLUE_WOOL;
+        
+        case PixelBlock.BrownWool:
+            return BROWN_WOOL;
+        
+        case PixelBlock.GreenWool:
+            return GREEN_WOOL;
+        
+        case PixelBlock.RedWool:
+            return RED_WOOL;
+        
+        case PixelBlock.BlackWool:
+            return BLACK_WOOL;
     }
 
     return 0;

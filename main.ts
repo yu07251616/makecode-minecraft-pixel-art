@@ -464,12 +464,6 @@ function getMinecraftBlock(block: PixelBlock): number {
         
         case PixelBlock.BlackTerracotta:
             return BLACK_TERRACOTTA;
-
-        case PixelBlock.WhiteWool:
-            return blocks.colorToBlock(
-                COLORED_WOOL,
-                WHITE
-    );
     }
 
     return 0;

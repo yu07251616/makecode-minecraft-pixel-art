@@ -26,6 +26,11 @@
             border: 1px solid #cccccc;
             box-sizing: border-box;
         }
+
+        .block-button.selected {
+            border: 3px solid #000000;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -451,6 +456,14 @@
             button.addEventListener("click", function () {
                 selectedBlock = button.dataset.block;
                 selectedColor = button.dataset.color;
+
+                // すべてのボタンから選択状態を外す
+                blockButtons.forEach(function (otherButton) {
+                    otherButton.classList.remove("selected");
+                });
+            
+                // 今クリックしたボタンを選択状態にする
+                button.classList.add("selected");
             });
         });
     

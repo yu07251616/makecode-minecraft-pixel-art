@@ -470,6 +470,96 @@ function getMinecraftBlock(block: PixelBlock): number {
                 ColoredBlock.Wool,
                 WHITE
             );
+        
+        case PixelBlock.OrangeWool:
+            return blocks.colorToBlock(
+                ColoredBlock.Wool,
+                ORANGE
+            );
+        
+        case PixelBlock.MagentaWool:
+            return blocks.colorToBlock(
+                ColoredBlock.Wool,
+                MAGENTA
+            );
+        
+        case PixelBlock.LightBlueWool:
+            return blocks.colorToBlock(
+                ColoredBlock.Wool,
+                LIGHT_BLUE
+            );
+        
+        case PixelBlock.YellowWool:
+            return blocks.colorToBlock(
+                ColoredBlock.Wool,
+                YELLOW
+            );
+        
+        case PixelBlock.LimeWool:
+            return blocks.colorToBlock(
+                ColoredBlock.Wool,
+                LIME
+            );
+        
+        case PixelBlock.PinkWool:
+            return blocks.colorToBlock(
+                ColoredBlock.Wool,
+                PINK
+            );
+        
+        case PixelBlock.GrayWool:
+            return blocks.colorToBlock(
+                ColoredBlock.Wool,
+                GRAY
+            );
+        
+        case PixelBlock.LightGrayWool:
+            return blocks.colorToBlock(
+                ColoredBlock.Wool,
+                LIGHT_GRAY
+            );
+        
+        case PixelBlock.CyanWool:
+            return blocks.colorToBlock(
+                ColoredBlock.Wool,
+                CYAN
+            );
+        
+        case PixelBlock.PurpleWool:
+            return blocks.colorToBlock(
+                ColoredBlock.Wool,
+                PURPLE
+            );
+        
+        case PixelBlock.BlueWool:
+            return blocks.colorToBlock(
+                ColoredBlock.Wool,
+                BLUE
+            );
+        
+        case PixelBlock.BrownWool:
+            return blocks.colorToBlock(
+                ColoredBlock.Wool,
+                BROWN
+            );
+        
+        case PixelBlock.GreenWool:
+            return blocks.colorToBlock(
+                ColoredBlock.Wool,
+                GREEN
+            );
+        
+        case PixelBlock.RedWool:
+            return blocks.colorToBlock(
+                ColoredBlock.Wool,
+                RED
+            );
+        
+        case PixelBlock.BlackWool:
+            return blocks.colorToBlock(
+                ColoredBlock.Wool,
+                BLACK
+            );
     }
 
     return 0;

@@ -467,7 +467,7 @@ function getMinecraftBlock(block: PixelBlock): number {
 
         case PixelBlock.WhiteWool:
             return blocks.colorToBlock(
-                COLORED_WOOL,
+                ColoredBlock.Wool,
                 WHITE
             );
     }

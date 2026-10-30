@@ -259,7 +259,7 @@
 
     <div id="export-area">
 
-        <br><br>
+        <br>
         
         <textarea
             id="export-output"
@@ -281,7 +281,7 @@
 
     <div id="import-area">
         
-        <br><br>
+        <br>
         
         <textarea
             id="import-input"
@@ -457,6 +457,65 @@
             };
         
             return blockIds[block];
+        }
+
+        function getBlockName(id) {
+            const blockNames = {
+                0: "Empty",
+        
+                1: "WhiteConcrete",
+                2: "OrangeConcrete",
+                3: "MagentaConcrete",
+                4: "LightBlueConcrete",
+                5: "YellowConcrete",
+                6: "LimeConcrete",
+                7: "PinkConcrete",
+                8: "GrayConcrete",
+                9: "LightGrayConcrete",
+                10: "CyanConcrete",
+                11: "PurpleConcrete",
+                12: "BlueConcrete",
+                13: "BrownConcrete",
+                14: "GreenConcrete",
+                15: "RedConcrete",
+                16: "BlackConcrete",
+        
+                17: "WhiteTerracotta",
+                18: "OrangeTerracotta",
+                19: "MagentaTerracotta",
+                20: "LightBlueTerracotta",
+                21: "YellowTerracotta",
+                22: "LimeTerracotta",
+                23: "PinkTerracotta",
+                24: "GrayTerracotta",
+                25: "LightGrayTerracotta",
+                26: "CyanTerracotta",
+                27: "PurpleTerracotta",
+                28: "BlueTerracotta",
+                29: "BrownTerracotta",
+                30: "GreenTerracotta",
+                31: "RedTerracotta",
+                32: "BlackTerracotta",
+        
+                33: "WhiteWool",
+                34: "OrangeWool",
+                35: "MagentaWool",
+                36: "LightBlueWool",
+                37: "YellowWool",
+                38: "LimeWool",
+                39: "PinkWool",
+                40: "GrayWool",
+                41: "LightGrayWool",
+                42: "CyanWool",
+                43: "PurpleWool",
+                44: "BlueWool",
+                45: "BrownWool",
+                46: "GreenWool",
+                47: "RedWool",
+                48: "BlackWool"
+            };
+        
+            return blockNames[id] || "Empty";
         }
     
         blockButtons.forEach(function (button) {

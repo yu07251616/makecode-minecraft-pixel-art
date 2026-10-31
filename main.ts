@@ -346,24 +346,25 @@ enum PixelBlock {
     GreenTerracotta = 30,
     RedTerracotta = 31,
     BlackTerracotta = 32,
+    Terracotta=33,
 
     // Wool Blocks
-    WhiteWool = 33,
-    OrangeWool = 34,
-    MagentaWool = 35,
-    LightBlueWool = 36,
-    YellowWool = 37,
-    LimeWool = 38,
-    PinkWool = 39,
-    GrayWool = 40,
-    LightGrayWool = 41,
-    CyanWool = 42,
-    PurpleWool = 43,
-    BlueWool = 44,
-    BrownWool = 45,
-    GreenWool = 46,
-    RedWool = 47,
-    BlackWool = 48
+    WhiteWool = 34,
+    OrangeWool = 35,
+    MagentaWool = 36,
+    LightBlueWool = 37,
+    YellowWool = 38,
+    LimeWool = 39,
+    PinkWool = 40,
+    GrayWool = 41,
+    LightGrayWool = 42,
+    CyanWool = 43,
+    PurpleWool = 44,
+    BlueWool = 45,
+    BrownWool = 46,
+    GreenWool = 47,
+    RedWool = 48,
+    BlackWool = 49
 }
 
 
@@ -464,6 +465,9 @@ function getMinecraftBlock(block: PixelBlock): number {
         
         case PixelBlock.BlackTerracotta:
             return BLACK_TERRACOTTA;
+
+        case PixelBlock.Terracotta:
+            return TERRACOTTA;
 
         case PixelBlock.WhiteWool:
             return blocks.colorToBlock(

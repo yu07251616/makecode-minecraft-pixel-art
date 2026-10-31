@@ -707,6 +707,51 @@
                 );
             }
         });
+
+        importButton.addEventListener("click", function () {
+            const data = importInput.value.trim();
+        
+            if (!data.includes("|")) {
+                return;
+            }
+        
+            const parts = data.split("|");
+            const size = parts[0].split(",");
+        
+            const width = Number(size[0]);
+            const height = Number(size[1]);
+        
+            const blockIds = parts[1].split(",");
+        
+            if (
+                width < 1 ||
+                height < 1 ||
+                blockIds.length !== width * height
+            ) {
+                return;
+            }
+        
+            canvasWidth = width;
+            canvasHeight = height;
+        
+            pixelData = [];
+        
+            for (let i = 0; i < blockIds.length; i++) {
+                const id = Number(blockIds[i]);
+        
+                pixelData.push(
+                    getBlockName(id)
+                );
+            }
+        
+            widthInput.value = canvasWidth;
+            heightInput.value = canvasHeight;
+        
+            createCanvas(
+                canvasWidth,
+                canvasHeight
+            );
+        });
     </script>
 
 </body>

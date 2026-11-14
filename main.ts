@@ -467,7 +467,7 @@ function getMinecraftBlock(block: PixelBlock): number {
             return BLACK_TERRACOTTA;
 
         case PixelBlock.Terracotta:
-            return TERRACOTTA;
+            return hardened_clay;
 
         case PixelBlock.WhiteWool:
             return blocks.colorToBlock(
